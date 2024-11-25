@@ -30,3 +30,21 @@ const checkMiddleSeat = function(seat) {
 }
 checkMiddleSeat('11B');
 checkMiddleSeat('11c');
+console.log(airline.toLocaleLowerCase());
+console.log(airline.toUpperCase());
+
+const passenger = 'eDeN';
+const passengerLower = passenger.toLowerCase()
+console.log(passenger);
+console.log(passengerLower);
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+//compairing email
+const email = 'hello@gmail.com';
+const loginEmail = ' hello@gmail.Com \n';
+const lowerEmail = loginEmail.toLowerCase();
+const trimEmail = lowerEmail.trim();
+console.log(trimEmail);
+const normalizeEmail = loginEmail.toLowerCase().trim();
+console.log(normalizeEmail)
