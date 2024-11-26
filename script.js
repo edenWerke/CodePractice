@@ -124,3 +124,15 @@ waiting(4);
 waiting(5);
 waiting(6);
 waiting(7);
+
+const flights =
+    "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
+const holder = []
+for (const n of flights.split('+')) {
+    const splitted = n.split(';');
+    const emoji = splitted[0].startsWith('_Delayed') ? '🔴' : '';
+    // console.log(emoji)
+    // console.log(splitted)
+    const outPut = `${emoji }  ${splitted[0].replaceAll('_',' ').trim()}  from ${splitted[1].toUpperCase().slice(0, 3)} to ${splitted[2].toUpperCase().slice(0,3)} ( ${splitted[3].replace(':','h')})`;
+    console.log(outPut);
+}
