@@ -83,3 +83,44 @@ const checkBaggage = function(items) {
 checkBaggage('I have a laptop, some food and pocket of Knife');
 checkBaggage('Socks and camera');
 checkBaggage('Got some snacks and Gun for protection');
+console.log('A+very+nice+String'.split('+'))
+console.log('I LOVE MOMMY'.split(' '))
+const [firstName, lastName] = 'eden WErke'.split(' ');
+console.log(firstName, lastName.toLowerCase());
+const newName = ['Mr', firstName, lastName.toUpperCase()].join('.');
+console.log(newName);
+const capitalizeName = function(name) {
+    const names = name.split(' ');
+    const namesUpper = [];
+    for (const n of names) {
+        // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+        namesUpper.push(n.replace(n[0], n[0].toUpperCase()))
+    }
+
+    console.log(namesUpper.join(' '));
+    // console.log(namesUpper)
+};
+capitalizeName('eden werke');
+capitalizeName('muLu weLdu');
+const message = 'Go to gate 23'
+console.log(message.padEnd(23, "@").padEnd(23, "+"))
+console.log('eduuuuuuu'.padStart(23, "+"))
+const maskCreditCard = function(number) {
+    const str = number + ' '.trim();
+    console.log(typeof(str));
+    const edu = str.slice(-4).padStart(str.length, '*')
+    const add = str.slice(-15);
+    console.log(add);
+    console.log(edu.slice(4).padStart(str.length, (add)));
+};
+maskCreditCard(1000291612327);
+const greeting = 'hey there  ';
+console.log(greeting.repeat(10));
+
+const waiting = function(n) {
+    console.log(`there are ${n} plans waiting to  fly     ${'✈️'.repeat(n)}`)
+};
+waiting(4);
+waiting(5);
+waiting(6);
+waiting(7);
