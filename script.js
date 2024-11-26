@@ -48,3 +48,38 @@ const trimEmail = lowerEmail.trim();
 console.log(trimEmail);
 const normalizeEmail = loginEmail.toLowerCase().trim();
 console.log(normalizeEmail)
+const compare = function(correct, incorrect) {
+    if (correct === incorrect) {
+        console.log(true)
+    } else {
+        console.log(false)
+    }
+}
+compare('Eden', 'Eden')
+    //replacing
+const priceGB = '288,97#';
+const priceUS = priceGB.replace('#', '$').replace(',', '.');
+console.log(priceUS);
+const announcement = 'All passengers come to barding door 23.boarding door 23!'
+console.log(announcement.replace('door', 'gate'));
+console.log(announcement.replaceAll('door', 'gate'));
+console.log(announcement.replace(/door/g, 'gate'));
+//BOOLEANS
+const plane = 'Airbus A707neo';
+console.log(plane.includes('A707'));
+console.log(plane.includes('rf'))
+if (plane.startsWith('Air') && plane.endsWith('neo')) {
+    console.log('part of new air bus family')
+}
+//practice exerscise
+const checkBaggage = function(items) {
+    if (items.toLowerCase().includes('gun') || items.toLowerCase().includes('knife')) {
+        console.log('you are not allowed to pass');
+    } else {
+        console.log('You can pass')
+    }
+
+}
+checkBaggage('I have a laptop, some food and pocket of Knife');
+checkBaggage('Socks and camera');
+checkBaggage('Got some snacks and Gun for protection');
